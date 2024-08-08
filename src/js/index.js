@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import "../styles/index.css";
 
 //import your own components
+import Nav from "./component/nav.js";
 import Home from "./component/home.jsx";
 
 //render your react application
