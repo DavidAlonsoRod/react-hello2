@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({ title, text, imageUrl, link }) => {
     return (
         <>
 
@@ -8,15 +8,17 @@ const Card = () => {
 
 
 
-            <div className="card m-3" style={{ width: '18rem' }}>
-                <div className="image d-flex justify-content-center align-items-center" style={StyleSheet.backGroundImage}>500x325</div>
-                <div className="card-body text-center">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+            <div className="card m-3" style={{ width: "18rem" }}>
+                <img src={imageUrl} className="card-img-top" alt={title} />
+                <div className="card-body d-flex flex-column align-items-center">
+                    <h5 className="card-title">{title}</h5>
+                    <p className="card-text">{text}</p>
+                    <a href={link} className="btn btn-primary">Ver</a>
                 </div>
-
             </div>
+
+
+
 
 
         </>
